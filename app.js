@@ -15,7 +15,7 @@ userText.addEventListener('keyup',(e) => {
 
     food.getfood(foodText).then(fooddata => {
         fooddata.meals.forEach(element => {
-            ui.showfood(element.strMeal)
+            ui.showfood(element)
         })
         
     console.log(fooddata)});

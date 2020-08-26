@@ -8,7 +8,8 @@ class UI{
         <div class="row">
                 <div class="col-md-3">
                 <ul>
-                <li>${food}</li>
+                <li>${food.strMeal}</li>
+                <li>${food.strCategory}</li>
                 </ul>
                 </div>
             </div>
