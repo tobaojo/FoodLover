@@ -11,15 +11,18 @@ const ui = new UI;
 const userText = document.getElementById('foodForm')
 
 userText.addEventListener('keyup',(e) => {
-    const foodText = e.target.value;
 
-    food.getfood(foodText).then(fooddata => {
-        fooddata.meals.forEach(element => {
-            ui.showfood(element)
-        })
+    
+        const foodText = e.target.value;
         
-    console.log(fooddata)});
+        food.getfood(foodText).then(fooddata => {
+    
+            ui.showfood(foodText);
+            // fooddata.meals.forEach(element => {
+    
+            //     ui.showfood(element);
+            })
+    });
 
-
-})
+    
 

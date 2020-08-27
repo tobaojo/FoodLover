@@ -4,15 +4,23 @@ class UI{
     }
     //show food on ui
     showfood(food){
-        this.foodProfile.innerHTML = `<div class="card card-body mb-3">
-        <div class="row">
-                <div class="col-md-3">
-                <ul>
-                <li>${food.strMeal}</li>
-                <li>${food.strCategory}</li>
-                </ul>
-                </div>
+
+             this.foodProfile.innerHTML = `<div class="card card-body mb-3">
+            <div>
+                <h3 class="text-center">${food.strMeal}</h3>
             </div>
-        </div>`
+                <div class="col-md-3">
+                <span class="badge badge-primary">Category: ${food.strCategory}</span>
+                <span class="badge badge-secondary">Origin: ${food.strArea}</span>
+                <br><br><br>
+                </div>
+                <div>
+                <img class="rounded mx-auto d-block" src="${food.strMealThumb}">
+                </div>
+            </div>`;
+    }
+
+    clearFood(){
+        this.foodProfile.innerHTML = '';
     }
 }
